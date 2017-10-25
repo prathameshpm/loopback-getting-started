@@ -41,5 +41,13 @@
   "CoffeeShop": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "Review": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Reviewer": {
+    "dataSource": "mongoDs",
+    "public": true
   }
 }

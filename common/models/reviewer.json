@@ -1,23 +1,17 @@
 {
-  "name": "CoffeeShop",
-  "plural": "CoffeeShops",
-  "base": "PersistedModel",
+  "name": "Reviewer",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "reviews": {
       "type": "hasMany",
       "model": "Review",
-      "foreignKey": ""
+      "foreignKey": "publisherId"
     }
   },
   "acls": [
@@ -26,12 +20,6 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
     }
   ],
   "methods": {}
